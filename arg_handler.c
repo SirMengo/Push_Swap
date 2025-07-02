@@ -6,7 +6,7 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 13:59:44 by msimoes           #+#    #+#             */
-/*   Updated: 2025/07/02 16:20:22 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/07/02 16:38:13 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static int	is_non_num(int argc, char **argv)
 	return (0);
 }
 
-static long	*conv_int_arr(int argc, char **argv)
+static long	*conv_long_arr(int argc, char **argv)
 {
 	long i;
 	long *arr;
@@ -56,7 +56,7 @@ static long	*conv_int_arr(int argc, char **argv)
 	return(arr);
 }
 
-static int	is_dup(int argc,long *arr)
+static int	is_dup(int argc, long *arr)
 {
 	int i;
 	int j;
@@ -96,10 +96,10 @@ long	*handler(int argc, char **argv)
 
 	if (is_non_num(argc, argv) == 1)
 		err();
-	arr = conv_int_arr(argc, argv);
-	if (is_dup(argc, arr) == 1)
+	arr = conv_long_arr(argc, argv);
+	if (is_dup(argc - 1, arr) == 1)
 		err();
-	if (is_int_limit(argc, arr) == 1)
+	if (is_int_limit(argc - 1, arr) == 1)
 		err();
 	return(arr);
 }
