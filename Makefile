@@ -6,12 +6,15 @@
 #    By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/08 12:46:46 by msimoes           #+#    #+#              #
-#    Updated: 2025/06/26 16:11:39 by msimoes          ###   ########.fr        #
+#    Updated: 2025/07/02 16:20:51 by msimoes          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
-SRCS = push_swap.c 
+SRCS = push_swap.c errors.c arg_handler.c
+
+E_PATH = ./srcs/
+SRCS_EXT = $(E_PATH)ft_atol.c $(E_PATH)ft_isdigit.c
 
 COMP_LIB = ar rcs
 RM = rm -f
@@ -19,24 +22,22 @@ CC = cc
 CC_FLAGS = -Wall -Wextra -Werror -g
 
 OBJS = $(SRCS:.c=.o)
+OBJS_EXT = $(SRCS_EXT:.c=.o)
 
 %.o : %.c
 	$(CC) $(CC_FLAGS) -c $< -o $@
 
+$(NAME): $(OBJS) $(EXT_PATH) $(OBJS_EXT)
+	$(CC) $(CC_FLAGS) $(OBJS) $(OBJS_EXT) -o $(NAME)
+
 all: $(NAME)
 
 clean:
-	$(RM) $(OBJS)
+	$(RM) $(OBJS) $(EXT_PATH)$(OBJS_EXT)
 
 fclean: clean
-	$(RM) $(NAME)
+	$(RM) $(NAME) $(EXT_PATH)$(OBJS_EXT)
 
 re: fclean all
-
-#$(NAME): $(OBJS) 
-#	$(COMP_LIB) $(NAME) $(OBJS)
-
-$(NAME): $(OBJS) 
-	$(CC) $(CC_FLAGS) $(OBJS) -o$(NAME)
 
 .PHONY: all clean fclean re

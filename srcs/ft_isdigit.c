@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/26 12:56:57 by msimoes           #+#    #+#             */
-/*   Updated: 2025/07/02 16:06:55 by msimoes          ###   ########.fr       */
+/*   Created: 2025/03/12 02:45:58 by msimoes           #+#    #+#             */
+/*   Updated: 2025/07/02 14:23:14 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-int	main(int argc, char **argv)
+int	ft_isdigit(int c)
 {
-	long *arr;
-	
-	arr = handler(argc, argv);
-	(void)arr;
-	printf("Passed");
+	if (c >= '0' && c <= '9')
+		return (1);
+	return (0);
 }

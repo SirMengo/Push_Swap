@@ -6,12 +6,23 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 13:03:15 by msimoes           #+#    #+#             */
-/*   Updated: 2025/06/26 16:17:55 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/07/02 16:07:53 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP
 # define PUSH_SWAP
+
+# include <unistd.h>
+
+# include "srcs/libft.h"
+
+//arg_handler.c
+long	*handler(int argc, char **argv);
+
+
+//errors.c
+void	err();
 
 typedef struct s_list
 {

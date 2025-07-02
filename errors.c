@@ -1,22 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   errors.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/26 12:56:57 by msimoes           #+#    #+#             */
-/*   Updated: 2025/07/02 16:06:55 by msimoes          ###   ########.fr       */
+/*   Created: 2025/07/01 12:25:24 by msimoes           #+#    #+#             */
+/*   Updated: 2025/07/01 13:34:31 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int argc, char **argv)
+void	err()
 {
-	long *arr;
-	
-	arr = handler(argc, argv);
-	(void)arr;
-	printf("Passed");
+	write(2, "ERROR\n", 6);
+	exit(0);
 }
