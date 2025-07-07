@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/26 13:03:15 by msimoes           #+#    #+#             */
-/*   Updated: 2025/07/03 14:44:24 by msimoes          ###   ########.fr       */
+/*   Created: 2025/04/21 14:37:32 by msimoes           #+#    #+#             */
+/*   Updated: 2025/07/03 14:16:02 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "libft.h"
 
-# include <unistd.h>
+t_list	*ft_lstnew(void *content)
+{
+	t_list	*new;
 
-# include "srcs/libft.h"
-
-//arg_handler.c
-long	*handler(int argc, char **argv);
-
-//errors.c
-void	err();
-
-//lst_handler.c
-void	lst_create(t_list **stack, long *arr);
-
-#endif
+	new = malloc(sizeof(t_list));
+	if (!new)
+		return (NULL);
+	new->content = content;
+	new->next = NULL;
+	return (new);
+}

@@ -6,7 +6,7 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 13:59:44 by msimoes           #+#    #+#             */
-/*   Updated: 2025/07/02 16:38:13 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/07/03 13:48:47 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static int	is_non_num(int argc, char **argv)
 	while (i < argc)
 	{
 		j = 0;
-		if (argv[i][j] == '-' || argv[i][j] == '+')
+		if (argv[i][j] == '-')
 			j++;
 		if (argv[i][j] == '\0')
 			return (1);
@@ -40,7 +40,7 @@ static long	*conv_long_arr(int argc, char **argv)
 {
 	long i;
 	long *arr;
-	
+
 	arr = malloc(sizeof(long) * (argc - 1));
 	if (!arr)
 	{
@@ -60,7 +60,7 @@ static int	is_dup(int argc, long *arr)
 {
 	int i;
 	int j;
-	
+
 	i = 0;
 	while (i < argc)
 	{

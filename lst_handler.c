@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   lst_handler.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/26 13:03:15 by msimoes           #+#    #+#             */
-/*   Updated: 2025/07/03 14:44:24 by msimoes          ###   ########.fr       */
+/*   Created: 2025/07/03 11:32:34 by msimoes           #+#    #+#             */
+/*   Updated: 2025/07/03 14:46:13 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "push_swap.h"
 
-# include <unistd.h>
 
-# include "srcs/libft.h"
+void	lst_create(t_list **stack, long *arr)
+{
+	int		i;
+	t_list	*node;
 
-//arg_handler.c
-long	*handler(int argc, char **argv);
-
-//errors.c
-void	err();
-
-//lst_handler.c
-void	lst_create(t_list **stack, long *arr);
-
-#endif
+	i = 0;
+	while(arr[i])
+	{
+		node = ft_lstnew(arr[i++]);
+		ft_lstadd_back(stack, node);
+	}
+}
