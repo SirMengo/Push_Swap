@@ -6,7 +6,7 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 10:51:47 by msimoes           #+#    #+#             */
-/*   Updated: 2025/07/08 11:48:54 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/07/08 12:25:34 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ typedef struct s_list
 //Libft
 long	ft_atol(const char *str);
 int		ft_isdigit(int c);
-void	lst_create(t_list **stack, long *arr);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 t_list	*ft_lstnew(long content);
 

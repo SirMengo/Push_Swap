@@ -6,7 +6,7 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 13:03:15 by msimoes           #+#    #+#             */
-/*   Updated: 2025/07/03 14:44:24 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/07/08 12:04:01 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ long	*handler(int argc, char **argv);
 void	err();
 
 //lst_handler.c
-void	lst_create(t_list **stack, long *arr);
+void	lst_create(t_list **stack, long *arr, int argc);
 
 #endif
