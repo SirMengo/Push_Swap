@@ -6,7 +6,7 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 12:56:57 by msimoes           #+#    #+#             */
-/*   Updated: 2025/07/03 14:46:53 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/07/08 11:59:22 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,13 @@ int	main(int argc, char **argv)
 	
 	arr = handler(argc, argv);
 	lst_create(&a, arr);
-	
+
+	while (a)
+	{
+		printf("%ld\n",a->content);
+		a = a->next;
+	}
+
 	(void)b;
 	free(arr);
 }
