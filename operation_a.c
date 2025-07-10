@@ -1,33 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   operation_a.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/10 10:51:47 by msimoes           #+#    #+#             */
-/*   Updated: 2025/07/08 16:19:31 by msimoes          ###   ########.fr       */
+/*   Created: 2025/07/08 16:27:21 by msimoes           #+#    #+#             */
+/*   Updated: 2025/07/09 14:44:29 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <stdlib.h>
-# include <unistd.h>
-# include <stdio.h>
-# include <limits.h>
-# include <stdint.h>
+#include "push_swap.h"
 
-typedef struct s_list
+void	sa(t_list **lst)
 {
-	long			num;
-	struct s_list	*next;
-}	t_list;
+	swap_two(lst);
+	write(1, "sa\n", 3);
+}
+/*
+void	pa(t_list *st)
+{
+	t_list *n;
 
-//Libft
-long	ft_atol(const char *str);
-int		ft_isdigit(int c);
-void	ft_lstadd_back(t_list **lst, t_list *new);
-t_list	*ft_lstnew(long content);
-
-#endif
+	n = 	
+}
+*/
