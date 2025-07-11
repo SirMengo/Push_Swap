@@ -6,7 +6,7 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 16:27:21 by msimoes           #+#    #+#             */
-/*   Updated: 2025/07/10 12:56:03 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/07/11 14:29:53 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,12 @@ void	pa(t_list **lst_a, t_list **lst_b)
 {
 	lst_push(lst_a, lst_b);
 	write(1, "pa\n", 3);
+}
+
+void	ra(t_list **lst_a)
+{
+	lst_rotate(lst_a);
+	write(1, "ra\n", 3);
 }
 
 void	rra(t_list **lst)
