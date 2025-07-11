@@ -1,31 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   operation_a.c                                      :+:      :+:    :+:   */
+/*   operation_double.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/08 16:27:21 by msimoes           #+#    #+#             */
-/*   Updated: 2025/07/10 12:56:03 by msimoes          ###   ########.fr       */
+/*   Created: 2025/07/10 15:03:25 by msimoes           #+#    #+#             */
+/*   Updated: 2025/07/10 15:13:11 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sa(t_list **lst)
-{
-	swap_two(lst);
-	write(1, "sa\n", 3);
-}
-
-void	pa(t_list **lst_a, t_list **lst_b)
-{
-	lst_push(lst_a, lst_b);
-	write(1, "pa\n", 3);
-}
-
-void	rra(t_list **lst)
-{
-	lst_reverse(lst);
-	write(1, "rra\n", 4);
-}

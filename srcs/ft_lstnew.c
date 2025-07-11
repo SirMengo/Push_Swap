@@ -6,7 +6,7 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 14:37:32 by msimoes           #+#    #+#             */
-/*   Updated: 2025/07/08 11:48:51 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/07/10 12:49:37 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_list	*ft_lstnew(long content)
 	new = malloc(sizeof(t_list));
 	if (!new)
 		return (NULL);
-	new->content = content;
+	new->num = content;
 	new->next = NULL;
 	return (new);
 }

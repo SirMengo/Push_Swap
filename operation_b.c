@@ -1,35 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   operation_b.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/10 10:51:47 by msimoes           #+#    #+#             */
-/*   Updated: 2025/07/10 12:30:56 by msimoes          ###   ########.fr       */
+/*   Created: 2025/07/10 14:54:01 by msimoes           #+#    #+#             */
+/*   Updated: 2025/07/10 14:56:41 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <stdlib.h>
-# include <unistd.h>
-# include <stdio.h>
-# include <limits.h>
-# include <stdint.h>
+#include "push_swap.h"
 
-typedef struct s_list
+void	sb(t_list **lst)
 {
-	long			num;
-	struct s_list	*next;
-}	t_list;
+	swap_two(lst);
+	write(1, "sb\n", 3);
+}
 
-//Libft
-long	ft_atol(const char *str);
-int		ft_isdigit(int c);
-void	ft_lstadd_front(t_list **lst, t_list *new);
-void	ft_lstadd_back(t_list **lst, t_list *new);
-t_list	*ft_lstnew(long content);
+void	pb(t_list **lst_b, t_list **lst_a)
+{
+	lst_push(lst_b, lst_a);
+	write(1, "pb\n", 3);
+}
 
-
-#endif
+void	rrb(t_list **lst)
+{
+	lst_reverse(lst);
+	write(1, "rrb\n", 4);
+}
