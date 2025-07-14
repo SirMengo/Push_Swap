@@ -6,13 +6,13 @@
 #    By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/08 12:46:46 by msimoes           #+#    #+#              #
-#    Updated: 2025/07/11 14:37:16 by msimoes          ###   ########.fr        #
+#    Updated: 2025/07/14 11:36:31 by msimoes          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 SRCS = push_swap.c errors.c arg_handler.c lst_handler.c utils.c operation_a.c \
-		operation_b.c operation_double.c
+		operation_b.c operation_double.c check_order.c
 
 E_PATH = ./srcs/
 SRCS_EXT = $(E_PATH)ft_atol.c $(E_PATH)ft_isdigit.c $(E_PATH)ft_lstadd_back.c \

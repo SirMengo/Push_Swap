@@ -6,7 +6,7 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 13:59:44 by msimoes           #+#    #+#             */
-/*   Updated: 2025/07/08 12:31:16 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/07/14 14:35:21 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,7 @@ static long	*conv_long_arr(int argc, char **argv)
 
 	arr = malloc(sizeof(long) * (argc - 1));
 	if (!arr)
-	{
-		free(arr);
-		err();
-	}
+		err_args(arr);
 	i = 1;
 	while (i < argc)
 	{
@@ -94,12 +91,18 @@ long	*handler(int argc, char **argv)
 {
 	long *arr;
 
+	arr = NULL;
 	if (is_non_num(argc, argv) == 1)
-		err();
+		err_args(arr);
 	arr = conv_long_arr(argc, argv);
 	if (is_dup(argc - 1, arr) == 1)
-		err();
+		err_args(arr);
 	if (is_int_limit(argc - 1, arr) == 1)
-		err();
+		err_args(arr);
+	if (is_ordered(argc - 1, arr) == 0)
+	{
+		free(arr);
+		exit(0);
+	}
 	return(arr);
 }

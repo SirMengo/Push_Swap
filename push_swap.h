@@ -6,7 +6,7 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 13:03:15 by msimoes           #+#    #+#             */
-/*   Updated: 2025/07/11 14:32:28 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/07/14 15:42:23 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,14 @@
 long	*handler(int argc, char **argv);
 
 //errors.c
-void	err();
+void	err_args(long *arr);
 
 //lst_handler.c
 void	lst_create(t_list **stack, long *arr, int argc);
 
 //utils.c
 void	swap_two(t_list **lst);
+void	swap_three(t_list **a);
 void	lst_push(t_list **dest, t_list **src);
 void	lst_rotate(t_list **lst);
 void	lst_reverse(t_list **lst);
@@ -48,5 +49,9 @@ void	rrb(t_list **lst);
 void	ss(t_list **lst_a, t_list **lst_b);
 void	rr(t_list **lst_a, t_list **lst_b);
 void	rrr(t_list **lst_a, t_list **lst_b);
+
+//check_order.c
+int		is_ordered(int argc, long *arr);
+
 
 #endif
