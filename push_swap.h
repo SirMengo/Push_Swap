@@ -6,7 +6,7 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 13:03:15 by msimoes           #+#    #+#             */
-/*   Updated: 2025/07/14 15:42:23 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/07/14 16:28:07 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,5 @@ void	rrr(t_list **lst_a, t_list **lst_b);
 
 //check_order.c
 int		is_ordered(int argc, long *arr);
-
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 12:56:57 by msimoes           #+#    #+#             */
-/*   Updated: 2025/07/14 15:48:34 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/07/15 11:37:29 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ void	push_swap(int argc, t_list **a)
 		sa(a);
 	if (argc == 3)
 		swap_three(a);
+	/*if (argc >= 4)
+		turk();*/
 }
 
 int	main(int argc, char **argv)
