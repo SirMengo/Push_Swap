@@ -1,31 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/26 13:03:15 by msimoes           #+#    #+#             */
-/*   Updated: 2025/07/17 10:10:48 by msimoes          ###   ########.fr       */
+/*   Created: 2025/02/16 16:13:22 by msimoes           #+#    #+#             */
+/*   Updated: 2025/07/02 16:04:34 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "libft.h"
 
-# include "libft/libft.h"
-# include "moves/moves.h"
+long	ft_atol(const char *str)
+{
+	long int	i;
+	long				val;
+	long				res;
 
-//arg_handler.c
-long	*handler(int argc, char **argv);
-
-//errors.c
-void	err_args(long *arr);
-
-//lst_handler.c
-void	lst_create(t_list **stack, long *arr, int argc);
-
-//check_order.c
-int		is_ordered(int argc, long *arr);
-
-#endif
+	i = 0;
+	val = 1;
+	res = 0;
+	while (str[i] == ' ' || (str[i] >= '\t' && str[i] <= '\r'))
+		i++;
+	if (str[i] == '-' || str[i] == '+')
+	{
+		if (str[i] == '-')
+			val = -1;
+		i++;
+	}
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		res = res * 10 + (str[i] - '0');
+		i++;
+	}
+	return (res * val);
+}

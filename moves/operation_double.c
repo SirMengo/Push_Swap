@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   operation_double.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/26 13:03:15 by msimoes           #+#    #+#             */
-/*   Updated: 2025/07/17 10:10:48 by msimoes          ###   ########.fr       */
+/*   Created: 2025/07/10 15:03:25 by msimoes           #+#    #+#             */
+/*   Updated: 2025/07/17 10:12:31 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "moves.h"
 
-# include "libft/libft.h"
-# include "moves/moves.h"
+void	ss(t_list **lst_a, t_list **lst_b)
+{
+	swap_two(lst_a);
+	swap_two(lst_b);
+	write(1, "ss\n", 3);
+}
 
-//arg_handler.c
-long	*handler(int argc, char **argv);
-
-//errors.c
-void	err_args(long *arr);
-
-//lst_handler.c
-void	lst_create(t_list **stack, long *arr, int argc);
-
-//check_order.c
-int		is_ordered(int argc, long *arr);
-
-#endif
+void	rr(t_list **lst_a, t_list **lst_b)
+{
+	
+	lst_rotate(lst_a);
+	lst_rotate(lst_b);
+	write(1, "rr\n", 3);
+}
+		
+void	rrr(t_list **lst_a, t_list **lst_b)
+{
+	lst_reverse(lst_a);
+	lst_reverse(lst_b);
+	write(1, "rrr\n", 4);
+}

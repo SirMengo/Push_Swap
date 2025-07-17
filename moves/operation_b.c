@@ -1,31 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   operation_b.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/26 13:03:15 by msimoes           #+#    #+#             */
-/*   Updated: 2025/07/17 10:10:48 by msimoes          ###   ########.fr       */
+/*   Created: 2025/07/10 14:54:01 by msimoes           #+#    #+#             */
+/*   Updated: 2025/07/17 10:12:21 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "moves.h"
 
-# include "libft/libft.h"
-# include "moves/moves.h"
+void	sb(t_list **lst)
+{
+	swap_two(lst);
+	write(1, "sb\n", 3);
+}
 
-//arg_handler.c
-long	*handler(int argc, char **argv);
+void	pb(t_list **lst_b, t_list **lst_a)
+{
+	lst_push(lst_b, lst_a);
+	write(1, "pb\n", 3);
+}
 
-//errors.c
-void	err_args(long *arr);
+void	rb(t_list **lst_b)
+{
+	lst_rotate(lst_b);
+	write(1, "rb\n", 3);
+}
 
-//lst_handler.c
-void	lst_create(t_list **stack, long *arr, int argc);
-
-//check_order.c
-int		is_ordered(int argc, long *arr);
-
-#endif
+void	rrb(t_list **lst)
+{
+	lst_reverse(lst);
+	write(1, "rrb\n", 4);
+}
