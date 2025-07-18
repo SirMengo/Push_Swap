@@ -6,7 +6,7 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 12:56:57 by msimoes           #+#    #+#             */
-/*   Updated: 2025/07/15 11:37:29 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/07/17 12:10:49 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ void	print_list(t_list *lst)
 {
 	while (lst)
 	{
-		printf("%ld\n",lst->num);
+		printf("Num: %ld\n",lst->num);
+		printf("Cost: %ld\n",lst->cost_a);
 		lst = lst->next;
 	}
 }
@@ -41,6 +42,7 @@ int	main(int argc, char **argv)
 	//b = NULL;
 	arr = handler(argc, argv);
 	lst_create(&a, arr, argc - 1);
+	//calc_a(&a);
 	print_list(a);
 	push_swap(argc - 1, &a);
 	print_list(a);

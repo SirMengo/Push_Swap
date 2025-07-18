@@ -6,7 +6,7 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 13:03:15 by msimoes           #+#    #+#             */
-/*   Updated: 2025/07/17 10:10:48 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/07/17 11:21:44 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,8 @@ void	lst_create(t_list **stack, long *arr, int argc);
 
 //check_order.c
 int		is_ordered(int argc, long *arr);
+
+//calculate.c
+void	calc_a(t_list **lst);
 
 #endif
