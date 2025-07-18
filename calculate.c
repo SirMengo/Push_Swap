@@ -6,7 +6,7 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 11:03:09 by msimoes           #+#    #+#             */
-/*   Updated: 2025/07/17 16:46:02 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/07/18 12:24:44 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,4 +71,37 @@ void	calc_rotate(t_list **lst_a, t_list **lst_b)
 		val->cost_b = best_list(*lst_b, val->num);
 		val = val->next;
 	}
+}
+
+void	cost_total(t_list **lst)
+{
+	t_list *aux;
+
+	aux = *lst;
+	while (aux)
+	{
+		aux->total_cost = abs(aux->cost_a) + abs(aux->cost_b);
+		aux = aux->next;
+	}
+}
+
+t_list *calc_cost(t_list **lst)
+{
+	t_list	*pnt;
+	t_list	*aux;
+	int		low;
+
+	aux = *lst;
+	pnt = aux;
+	low = aux->total_cost;
+	while (aux)
+	{
+		if (aux->total_cost < low)
+		{
+			low = aux->total_cost;
+			pnt = aux;
+		}
+		aux = aux->next;
+	}
+	return (pnt);
 }
