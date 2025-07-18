@@ -6,7 +6,7 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 11:03:09 by msimoes           #+#    #+#             */
-/*   Updated: 2025/07/18 12:24:44 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/07/18 15:15:55 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	calc_a(t_list **lst)
 	int		i;
 	int		local;
 	t_list	*aux;
-
+	
 	aux = *lst;
 	i = ft_lstsize(*lst);
 	local = 0;
@@ -32,7 +32,7 @@ void	calc_a(t_list **lst)
 	}
 }
 
-long	best_list(t_list *lst, long num)
+static long	best_list(t_list *lst, long num)
 {
 	t_list *best;
 	t_list *tmp;
@@ -78,6 +78,7 @@ void	cost_total(t_list **lst)
 	t_list *aux;
 
 	aux = *lst;
+	printf("A");
 	while (aux)
 	{
 		aux->total_cost = abs(aux->cost_a) + abs(aux->cost_b);

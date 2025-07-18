@@ -6,7 +6,7 @@
 #    By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/08 12:46:46 by msimoes           #+#    #+#              #
-#    Updated: 2025/07/18 10:00:21 by msimoes          ###   ########.fr        #
+#    Updated: 2025/07/18 15:40:03 by msimoes          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,8 +16,8 @@ MOVES = $(MP)operation_a.c $(MP)operation_b.c $(MP)operation_double.c \
 
 EP = ./libft/
 EXT = $(EP)ft_atol.c $(EP)ft_isdigit.c $(EP)ft_lstadd_back.c \
-			$(EP)ft_lstnew.c $(EP)ft_lstadd_front.c $(EP)ft_lstsize.c
-			
+			$(EP)ft_lstnew.c $(EP)ft_lstadd_front.c $(EP)ft_lstsize.c \
+			$(EP)ft_lstclear.c
 NAME = push_swap
 SRCS = push_swap.c errors.c arg_handler.c lst_handler.c check_order.c \
 			calculate.c $(MOVES) $(EXT)

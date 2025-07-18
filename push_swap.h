@@ -6,7 +6,7 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 13:03:15 by msimoes           #+#    #+#             */
-/*   Updated: 2025/07/17 11:21:44 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/07/18 12:33:08 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,8 @@ int		is_ordered(int argc, long *arr);
 
 //calculate.c
 void	calc_a(t_list **lst);
+void	calc_rotate(t_list **lst_a, t_list **lst_b);
+void	cost_total(t_list **lst);
+t_list	*calc_cost(t_list **lst);
 
 #endif

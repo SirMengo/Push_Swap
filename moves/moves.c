@@ -6,7 +6,7 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 16:31:30 by msimoes           #+#    #+#             */
-/*   Updated: 2025/07/17 10:06:44 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/07/18 15:02:43 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ void	lst_push(t_list **dest, t_list **src)
 		return ;
 	temp = *src;
 	*src = (*src)->next;
-	ft_lstadd_back(dest, temp);
+	ft_lstadd_front(dest, temp);
 }
 
 void	lst_rotate(t_list **lst)

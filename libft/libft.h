@@ -6,7 +6,7 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 10:51:47 by msimoes           #+#    #+#             */
-/*   Updated: 2025/07/17 11:10:01 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/07/18 15:39:10 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@
 typedef struct s_list
 {
 	long			num;
-	long			cost_a;
-	long			cost_b;
-	long			total_cost;
+	int				cost_a;
+	int				cost_b;
+	int				total_cost;
 	struct s_list	*next;
 }	t_list;
 
@@ -33,6 +33,7 @@ int		ft_isdigit(int c);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 t_list	*ft_lstnew(long content);
+void	ft_lstclear(t_list **lst);
 int		ft_lstsize(t_list *lst);
 
 #endif
