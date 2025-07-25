@@ -6,7 +6,7 @@
 #    By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/08 12:46:46 by msimoes           #+#    #+#              #
-#    Updated: 2025/07/18 15:40:03 by msimoes          ###   ########.fr        #
+#    Updated: 2025/07/23 15:22:30 by msimoes          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,9 +18,10 @@ EP = ./libft/
 EXT = $(EP)ft_atol.c $(EP)ft_isdigit.c $(EP)ft_lstadd_back.c \
 			$(EP)ft_lstnew.c $(EP)ft_lstadd_front.c $(EP)ft_lstsize.c \
 			$(EP)ft_lstclear.c
+			
 NAME = push_swap
-SRCS = push_swap.c errors.c arg_handler.c lst_handler.c check_order.c \
-			calculate.c $(MOVES) $(EXT)
+SRCS = arg_handler.c calculate.c check_order.c errors.c func.c lst_handler.c \
+		push_swap.c turk.c $(MOVES) $(EXT)
 
 COMP_LIB = ar rcs
 RM = rm -f

@@ -6,7 +6,7 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/10 15:03:25 by msimoes           #+#    #+#             */
-/*   Updated: 2025/07/17 10:12:31 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/07/22 15:08:57 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ void	ss(t_list **lst_a, t_list **lst_b)
 
 void	rr(t_list **lst_a, t_list **lst_b)
 {
-	
 	lst_rotate(lst_a);
 	lst_rotate(lst_b);
 	write(1, "rr\n", 3);

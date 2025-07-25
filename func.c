@@ -1,47 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lst_handler.c                                      :+:      :+:    :+:   */
+/*   func.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/03 11:32:34 by msimoes           #+#    #+#             */
-/*   Updated: 2025/07/22 13:59:08 by msimoes          ###   ########.fr       */
+/*   Created: 2025/07/21 14:56:09 by msimoes           #+#    #+#             */
+/*   Updated: 2025/07/23 15:07:13 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	lst_create(t_list **stack, long *arr, int argc)
+long	*bubble_sort(long *arr, int size)
 {
-	int		i;
-	t_list	*node;
-
+	int	i;
+	int	j;
+	int	tmp;
+	
 	i = 0;
-	while(i < argc)
+	while(i < size - 1)
 	{
-		node = ft_lstnew(arr[i]);
-		ft_lstadd_back(stack, node);
-		i++;
-	}
-}
-
-long	*lst_arr(t_list *lst)
-{
-	t_list	*aux;
-	long	*arr;
-	int		i;
-
-	i = 0;
-	aux = lst;
-	arr = malloc(sizeof(long) * ft_lstsize(lst));
-	if (!arr)
-		return (NULL);
-	while(aux)
-	{
-		arr[i] = aux->num;
-		aux = aux->next;
+		j = 0;
+		while (j < size - 1 - i)
+		{		
+			if (arr[j] > arr[j + 1])
+			{
+				tmp = arr[j];
+				arr[j] = arr[j + 1];
+				arr[j + 1] = tmp;
+			}
+			j++;
+		}
 		i++;
 	}
 	return (arr);
+}
+
+void	calc_all(t_list **a, t_list **b)
+{
+	calc_a(a);
+	calc_a(b);
+	calc_rotate(a, b);
+	cost_total(a);
 }

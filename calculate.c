@@ -6,7 +6,7 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 11:03:09 by msimoes           #+#    #+#             */
-/*   Updated: 2025/07/18 15:15:55 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/07/21 11:17:11 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,6 @@ void	cost_total(t_list **lst)
 	t_list *aux;
 
 	aux = *lst;
-	printf("A");
 	while (aux)
 	{
 		aux->total_cost = abs(aux->cost_a) + abs(aux->cost_b);
