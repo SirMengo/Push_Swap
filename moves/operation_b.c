@@ -6,7 +6,7 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/10 14:54:01 by msimoes           #+#    #+#             */
-/*   Updated: 2025/07/18 15:04:17 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/07/25 11:31:29 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ void	pb(t_list **lst_b, t_list **lst_a)
 	write(1, "pb\n", 3);
 }
 
-void	rb(t_list **lst_b)
+void	rb(t_list **lst)
 {
-	lst_rotate(lst_b);
+	lst_rotate(lst);
 	write(1, "rb\n", 3);
 }
 

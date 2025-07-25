@@ -6,7 +6,7 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 13:03:15 by msimoes           #+#    #+#             */
-/*   Updated: 2025/07/25 11:02:43 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/07/25 11:27:02 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include "libft/libft.h"
 # include "moves/moves.h"
+
+void    print_local(t_list *lst);
 
 //arg_handler.c
 long	*handler(int argc, char **argv);

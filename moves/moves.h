@@ -6,7 +6,7 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 10:04:19 by msimoes           #+#    #+#             */
-/*   Updated: 2025/07/17 10:07:15 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/07/25 11:31:43 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,13 @@ void	lst_reverse(t_list **lst);
 //operations_a.c
 void	sa(t_list **lst);
 void	pa(t_list **lst_a, t_list **lst_b);
-void	ra(t_list **lst_a);
+void	ra(t_list **lst);
 void	rra(t_list **lst);
 
 //operation_b.c
 void	sb(t_list **lst);
 void	pb(t_list **lst_b, t_list **lst_a);
-void	rb(t_list **lst_b);
+void	rb(t_list **lst);
 void	rrb(t_list **lst);
 
 //operation_double.c
