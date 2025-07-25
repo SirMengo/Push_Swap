@@ -6,7 +6,7 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 13:03:15 by msimoes           #+#    #+#             */
-/*   Updated: 2025/07/25 11:27:02 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/07/25 12:52:14 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,33 +15,25 @@
 
 # include "libft/libft.h"
 # include "moves/moves.h"
-
-void    print_local(t_list *lst);
-
 //arg_handler.c
 long	*handler(int argc, char **argv);
-
 //errors.c
 void	err_args(long *arr);
-
+void	free_arr(long *original, long *sorted, long *inside);
 //lst_handler.c
 void	lst_create(t_list **stack, long *arr, int argc);
 long	*lst_arr(t_list *lst);
 long	*new_lst(long *sort, long *orig, long *inside, int size);
-
 //check_order.c
 int		is_ordered(int argc, long *arr);
-
 //calculate.c
 void	calc_a(t_list **lst);
 void	calc_rotate(t_list **lst_a, t_list **lst_b);
 void	cost_total(t_list **lst);
 t_list	*calc_cost(t_list **lst);
-
 //func.c
 long	*bubble_sort(long *arr, int size);
 void	calc_all(t_list **a, t_list **b);
-
 //turk.c
 void	rr_lst(t_list **a, t_list **b, int *pos_a, int *pos_b);
 void	rrr_lst(t_list **a, t_list **b, int *pos_a, int *pos_b);

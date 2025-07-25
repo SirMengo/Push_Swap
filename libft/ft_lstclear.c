@@ -6,7 +6,7 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 09:09:07 by msimoes           #+#    #+#             */
-/*   Updated: 2025/07/25 11:16:51 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/07/25 13:00:37 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void	ft_lstclear(t_list **lst)
 {
-	t_list *aux;
-	
+	t_list	*aux;
+
 	if (!lst)
 		return ;
-	while(*lst)
+	while (*lst)
 	{
 		aux = *lst;
 		*lst = (*lst)->next;

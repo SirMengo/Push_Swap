@@ -6,7 +6,7 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 11:03:09 by msimoes           #+#    #+#             */
-/*   Updated: 2025/07/25 11:23:42 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/07/25 12:47:55 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	calc_a(t_list **lst)
 	int		i;
 	int		local;
 	t_list	*aux;
-	
+
 	aux = *lst;
 	i = ft_lstsize(*lst);
 	local = 0;
@@ -34,8 +34,8 @@ void	calc_a(t_list **lst)
 
 static long	best_list(t_list *lst, long num)
 {
-	t_list *best;
-	t_list *tmp;
+	t_list	*best;
+	t_list	*tmp;
 
 	best = NULL;
 	tmp = lst;
@@ -54,7 +54,7 @@ static long	best_list(t_list *lst, long num)
 	tmp = lst;
 	while (tmp)
 	{
-		if(tmp->num > best->num)
+		if (tmp->num > best->num)
 			best = tmp;
 		tmp = tmp->next;
 	}
@@ -66,7 +66,7 @@ void	calc_rotate(t_list **lst_a, t_list **lst_b)
 	t_list	*val;
 
 	val = *lst_a;
-	while(val)
+	while (val)
 	{
 		val->cost_b = best_list(*lst_b, val->num);
 		val = val->next;
@@ -75,7 +75,7 @@ void	calc_rotate(t_list **lst_a, t_list **lst_b)
 
 void	cost_total(t_list **lst)
 {
-	t_list *aux;
+	t_list	*aux;
 
 	aux = *lst;
 	while (aux)
@@ -85,7 +85,7 @@ void	cost_total(t_list **lst)
 	}
 }
 
-t_list *calc_cost(t_list **lst)
+t_list	*calc_cost(t_list **lst)
 {
 	t_list	*pnt;
 	t_list	*aux;

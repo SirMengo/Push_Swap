@@ -6,7 +6,7 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 16:31:30 by msimoes           #+#    #+#             */
-/*   Updated: 2025/07/18 15:02:43 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/07/25 12:56:52 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	swap_two(t_list **lst)
 {
-	t_list *n1;
-	t_list *n2;
+	t_list	*n1;
+	t_list	*n2;
 
-	if(!lst || !*lst|| !(*lst)->next)
+	if (!lst || !*lst || !(*lst)->next)
 		return ;
 	n1 = *lst;
 	n2 = n1->next;
@@ -28,7 +28,7 @@ void	swap_two(t_list **lst)
 
 void	swap_three(t_list **a)
 {
-	t_list *aux;
+	t_list	*aux;
 
 	aux = *a;
 	if (aux->num > aux->next->num && aux->num < aux->next->next->num)
@@ -38,7 +38,7 @@ void	swap_three(t_list **a)
 		rra(a);
 		sa(a);
 	}
-	else if(aux->num < aux->next->num && aux->num > aux->next->next->num)
+	else if (aux->num < aux->next->num && aux->num > aux->next->next->num)
 		rra(a);
 	else if (aux->num > aux->next->num && aux->num > aux->next->next->num)
 	{
@@ -74,8 +74,8 @@ void	lst_rotate(t_list **lst)
 
 void	lst_reverse(t_list **lst)
 {
-	t_list *aux;
-	t_list *prep;
+	t_list	*aux;
+	t_list	*prep;
 
 	if (!lst || !*lst || !(*lst)->next)
 		return ;

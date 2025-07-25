@@ -6,7 +6,7 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 11:21:43 by msimoes           #+#    #+#             */
-/*   Updated: 2025/07/25 11:35:53 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/07/25 12:48:46 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ void	rr_lst(t_list **a, t_list **b, int *pos_a, int *pos_b)
 	while (*pos_a > 0 && *pos_b > 0)
 	{
 		rr(a, b);
-		(*a)--;
-		(*b)--;
+		(*pos_a)--;
+		(*pos_b)--;
 	}
 	while (*pos_a > 0)
 	{
@@ -37,8 +37,8 @@ void	rrr_lst(t_list **a, t_list **b, int *pos_a, int *pos_b)
 	while (*pos_a < 0 && *pos_b < 0)
 	{
 		rrr(a, b);
-		(*a)++;
-		(*b)++;
+		(*pos_a)++;
+		(*pos_b)++;
 	}
 	while (*pos_a < 0)
 	{
@@ -61,9 +61,9 @@ t_list	*calc_lst(t_list **lst)
 	aux = *lst;
 	point = aux;
 	upper = aux->num;
-	while(aux)
+	while (aux)
 	{
-		if(aux->num > upper)
+		if (aux->num > upper)
 		{
 			upper = aux->num;
 			point = aux;
@@ -108,12 +108,11 @@ void	push_nbr(t_list **a, t_list **b, int size)
 		ft_lstadd_back(a, ft_lstnew(inside[num++]));
 	pb(b, a);
 	pb(b, a);
-	if (is_ordered(ft_lstsize(*b), lst_arr(*b)) != 1)
+	free(original);
+	original = lst_arr(*b);
+	if (is_ordered(ft_lstsize(*b), original) != 1)
 		sb(b);
 	while (ft_lstsize(*a) > 0)
 		sort_list(a, b);
-	free(original);
-	free(sorted);
-	free(inside);
+	free_arr(original, sorted, inside);
 }
-

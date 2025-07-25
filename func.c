@@ -6,7 +6,7 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 14:56:09 by msimoes           #+#    #+#             */
-/*   Updated: 2025/07/23 15:07:13 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/07/25 12:50:42 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@ long	*bubble_sort(long *arr, int size)
 	int	i;
 	int	j;
 	int	tmp;
-	
+
 	i = 0;
-	while(i < size - 1)
+	while (i < size - 1)
 	{
 		j = 0;
 		while (j < size - 1 - i)
-		{		
+		{
 			if (arr[j] > arr[j + 1])
 			{
 				tmp = arr[j];

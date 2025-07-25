@@ -6,7 +6,7 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 13:59:44 by msimoes           #+#    #+#             */
-/*   Updated: 2025/07/21 11:55:38 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/07/25 12:46:45 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static int	is_non_num(int argc, char **argv)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 1;
 	while (i < argc)
@@ -38,8 +38,8 @@ static int	is_non_num(int argc, char **argv)
 
 static long	*conv_long_arr(int argc, char **argv)
 {
-	long i;
-	long *arr;
+	long	i;
+	long	*arr;
 
 	arr = malloc(sizeof(long) * (argc - 1));
 	if (!arr)
@@ -50,13 +50,13 @@ static long	*conv_long_arr(int argc, char **argv)
 		arr[i - 1] = ft_atol(argv[i]);
 		i++;
 	}
-	return(arr);
+	return (arr);
 }
 
 static int	is_dup(int argc, long *arr)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	while (i < argc)
@@ -75,21 +75,21 @@ static int	is_dup(int argc, long *arr)
 
 static int	is_int_limit(int argc, long *arr)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (i < argc)
 	{
 		if (arr[i] > INT_MAX || arr[i] < INT_MIN)
-			return(1);
+			return (1);
 		i++;
 	}
-	return(0);
+	return (0);
 }
 
 long	*handler(int argc, char **argv)
 {
-	long *arr;
+	long	*arr;
 
 	arr = NULL;
 	if (is_non_num(argc, argv) == 1)
@@ -104,5 +104,5 @@ long	*handler(int argc, char **argv)
 		free(arr);
 		exit(0);
 	}
-	return(arr);
+	return (arr);
 }
