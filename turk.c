@@ -6,7 +6,7 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 11:21:43 by msimoes           #+#    #+#             */
-/*   Updated: 2025/07/23 15:40:34 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/07/25 11:03:47 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ void	sort_list(t_list **lst_a, t_list **lst_b)
 		pb(lst_a, lst_b);
 }
 
-void	push_nbr(t_list **a, t_list **b, int size, long *arr)
+void	push_nbr(t_list **a, t_list **b, int size)
 {
 	long	*original;
 	long	*sorted;
@@ -101,5 +101,19 @@ void	push_nbr(t_list **a, t_list **b, int size, long *arr)
 	inside = malloc(sizeof(long) * size);
 	if (!inside)
 		return ;
-	inside = 
+	inside = new_lst(sorted, original, inside, size);
+	ft_lstclear(a);
+	num = 0;
+	while (num < size)
+		ft_lstadd_back(a, ft_lstnew(inside[num++]));
+	pb(a, b);
+	pb(a, b);
+	if (is_ordered(ft_lstsize(*b), lst_arr(*b)) != 1)
+		sb(b);
+	while (ft_lstsize(*a) > 0)
+		sort_list(a, b);
+	free(original);
+	free(sorted);
+	free(inside);
 }
+

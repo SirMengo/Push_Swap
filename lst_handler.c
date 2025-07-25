@@ -45,3 +45,26 @@ long	*lst_arr(t_list *lst)
 	}
 	return (arr);
 }
+
+long	*new_lst(long *sort, long *orig, long *inside, int size)
+{
+	int	i;
+	int	j;
+
+	j = 0;
+	while (j < size)
+	{
+		i = 0;
+		while (i < size)
+		{
+			if (orig[j] == sort[i])
+			{
+				inside[j] = i + 1;
+				break ;
+			}
+			i++;
+		}
+		j++;
+	}
+	return (inside);
+}

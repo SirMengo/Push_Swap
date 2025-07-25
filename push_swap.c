@@ -6,18 +6,18 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/23 11:54:05 by msimoes           #+#    #+#             */
-/*   Updated: 2025/07/23 15:03:33 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/07/25 11:17:14 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	push_swap(t_list **a, t_list **b, int argc, long *arr)
+void	push_swap(t_list **a, t_list **b, int argc)
 {
 	t_list	*node;
 	int		rotate;
 	
-	push_nbr(a, b, argc, arr);
+	push_nbr(a, b, argc);
 	calc_a(b);
 	node = calc_lst(b);
 	rotate = node->cost_a;
@@ -52,5 +52,5 @@ int main(int argc, char **argv)
 	else if (argc - 1 == 3)
 		swap_three(&a);
 	else
-		push_swap(&a, &b, argc - 1, arr);
+		push_swap(&a, &b, argc - 1);
 }
