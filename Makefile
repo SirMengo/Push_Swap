@@ -6,13 +6,13 @@
 #    By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/08 12:46:46 by msimoes           #+#    #+#              #
-#    Updated: 2025/07/23 15:22:30 by msimoes          ###   ########.fr        #
+#    Updated: 2025/08/05 12:33:25 by msimoes          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 MP= ./moves/
 MOVES = $(MP)operation_a.c $(MP)operation_b.c $(MP)operation_double.c \
-			$(MP)moves.c
+			$(MP)moves.c $(MP)swaps.c $(MP)four_five.c
 
 EP = ./libft/
 EXT = $(EP)ft_atol.c $(EP)ft_isdigit.c $(EP)ft_lstadd_back.c \

@@ -6,7 +6,7 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 10:04:19 by msimoes           #+#    #+#             */
-/*   Updated: 2025/07/25 12:51:39 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/08/04 11:38:25 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 
 # include "../libft/libft.h"
 //moves.c
-void	swap_two(t_list **lst);
-void	swap_three(t_list **a);
 void	lst_push(t_list **dest, t_list **src);
 void	lst_rotate(t_list **lst);
 void	lst_reverse(t_list **lst);
@@ -34,5 +32,9 @@ void	rrb(t_list **lst);
 void	ss(t_list **lst_a, t_list **lst_b);
 void	rr(t_list **lst_a, t_list **lst_b);
 void	rrr(t_list **lst_a, t_list **lst_b);
+//swaps.c
+void	swap_two(t_list **lst);
+void	swap_three(t_list **a);
+void	swap_five();
 
 #endif

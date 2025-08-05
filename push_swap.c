@@ -6,7 +6,7 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/23 11:54:05 by msimoes           #+#    #+#             */
-/*   Updated: 2025/07/25 12:49:56 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/08/05 10:57:56 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,8 @@ int	main(int argc, char **argv)
 		pa(&a, &b);
 	else if (argc - 1 == 3)
 		swap_three(&a);
+	else if (argc - 1 == 4 || argc - 1 == 5)
+		swap_five(&a, &b, argc - 1);
 	else
 		push_swap(&a, &b, argc - 1);
 	ft_lstclear(&a);
