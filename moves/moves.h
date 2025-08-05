@@ -6,7 +6,7 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 10:04:19 by msimoes           #+#    #+#             */
-/*   Updated: 2025/08/04 11:38:25 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/08/05 13:28:47 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,7 @@ void	rrr(t_list **lst_a, t_list **lst_b);
 void	swap_two(t_list **lst);
 void	swap_three(t_list **a);
 void	swap_five();
+//four_five.c
+void	swap_five(t_list **a, t_list **b, int size);
 
 #endif

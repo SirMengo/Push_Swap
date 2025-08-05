@@ -6,7 +6,7 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/05 12:01:43 by msimoes           #+#    #+#             */
-/*   Updated: 2025/08/05 13:14:30 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/08/05 13:23:20 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,8 +74,7 @@ void	swap_five(t_list **a, t_list **b, int size)
 			move_rotate(a, lower_posi(a, lower), size, lower);
 		else if (aux->num == lower)
 		{
-			printf("%i\n", lower);
-			pb(a, b);
+			pb(b, a);
 			lower = lower_num(a);
 			num--;
 		}
