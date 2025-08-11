@@ -6,7 +6,7 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/23 11:54:05 by msimoes           #+#    #+#             */
-/*   Updated: 2025/08/05 10:57:56 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/08/11 09:28:19 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int	main(int argc, char **argv)
 	lst_create(&a, arr, argc - 1);
 	free(arr);
 	if (argc - 1 == 2)
-		pa(&a, &b);
+		sa(&a);
 	else if (argc - 1 == 3)
 		swap_three(&a);
 	else if (argc - 1 == 4 || argc - 1 == 5)

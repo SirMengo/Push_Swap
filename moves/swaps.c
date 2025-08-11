@@ -6,7 +6,7 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 11:34:10 by msimoes           #+#    #+#             */
-/*   Updated: 2025/08/05 12:01:32 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/08/11 11:16:01 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,27 @@ void	swap_two(t_list **lst)
 	*lst = n2;
 }
 
+int	check_order(t_list **lst)
+{
+	long	*arr;
+
+	arr = lst_arr(*lst);
+	if (is_ordered(3, arr) == 0)
+	{
+		free(arr);
+		return (0);
+	}
+	free(arr);
+	return (1);
+}
+
 void	swap_three(t_list **a)
 {
 	t_list	*aux;
 
 	aux = *a;
+	if (check_order(a) == 0)
+		return ;
 	if (aux->num > aux->next->num && aux->num < aux->next->next->num)
 		sa(a);
 	else if (aux->num < aux->next->num && aux->num < aux->next->next->num)
@@ -48,4 +64,3 @@ void	swap_three(t_list **a)
 			sa(a);
 	}
 }
-
