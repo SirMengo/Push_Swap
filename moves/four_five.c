@@ -6,7 +6,7 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/05 12:01:43 by msimoes           #+#    #+#             */
-/*   Updated: 2025/08/05 13:23:20 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/08/11 12:29:37 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,31 +31,31 @@ int	lower_num(t_list **list_a)
 	return (low);
 }
 
-int	lower_posi(t_list **list, int low)
+int	lower_pos(t_list **list, int low)
 {
-	int		posi;
+	int		pos;
 	t_list	*aux;
 
 	aux = *list;
-	posi = 0;
+	pos = 0;
 	while (aux)
 	{
 		if (aux->num == low)
-			return (posi);
+			return (pos);
 		aux = aux->next;
-		posi++;
+		pos++;
 	}
-	return (posi);
+	return (pos);
 }
 
-void	move_rotate(t_list **list, int posi, int size, int low)
+void	move_rotate(t_list **list, int pos, int size, int low)
 {
 	t_list	*aux;
 
 	aux = *list;
-	if (posi <= (size / 2) && aux->num != low)
+	if (pos <= (size / 2) && aux->num != low)
 		ra(list);
-	else if (posi > (size / 2) && aux->num != low)
+	else if (pos > (size / 2) && aux->num != low)
 		rra(list);
 }
 
@@ -71,7 +71,7 @@ void	swap_five(t_list **a, t_list **b, int size)
 	{
 		aux = *a;
 		if (aux->num != lower)
-			move_rotate(a, lower_posi(a, lower), size, lower);
+			move_rotate(a, lower_pos(a, lower), size, lower);
 		else if (aux->num == lower)
 		{
 			pb(b, a);
