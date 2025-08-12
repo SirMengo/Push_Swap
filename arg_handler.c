@@ -6,7 +6,7 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 13:59:44 by msimoes           #+#    #+#             */
-/*   Updated: 2025/07/25 12:46:45 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/08/11 14:45:14 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static int	is_non_num(int argc, char **argv)
 	while (i < argc)
 	{
 		j = 0;
-		if (argv[i][j] == '-')
+		if (argv[i][j] == '-' || argv[i][j] == '+')
 			j++;
 		if (argv[i][j] == '\0')
 			return (1);

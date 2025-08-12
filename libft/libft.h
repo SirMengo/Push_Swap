@@ -6,7 +6,7 @@
 /*   By: msimoes <msimoes@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 10:51:47 by msimoes           #+#    #+#             */
-/*   Updated: 2025/07/18 15:39:10 by msimoes          ###   ########.fr       */
+/*   Updated: 2025/08/11 13:21:34 by msimoes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,6 @@ void	ft_lstadd_back(t_list **lst, t_list *new);
 t_list	*ft_lstnew(long content);
 void	ft_lstclear(t_list **lst);
 int		ft_lstsize(t_list *lst);
+char	**ft_split(char *s, char c);
 
 #endif
